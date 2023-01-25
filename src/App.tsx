@@ -1,11 +1,9 @@
-import NavBar from "./components/navbar/NavBar";
-import Footer from "./components/footers/Footer";
+import LandingPages from "./pages/LandingPages";
 
 function App() {
   return (
     <>
-      <NavBar />
-      <Footer />
+      <LandingPages />
     </>
   );
 }

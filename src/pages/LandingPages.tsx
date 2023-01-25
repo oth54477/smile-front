@@ -1,15 +1,34 @@
 import styled from "styled-components";
 import Card from "../components/common/Card";
+import NavBar from "../components/navbar/NavBar";
+import Footer from "../components/footers/Footer";
+import { useEffect, useState } from "react";
 
-const Nav = styled.div`
-  height: 80px;
-  border: solid 1px black;
-`;
+// const Nav = styled.div`
+//   height: 80px;
+//   border: solid 1px black;
+// `;
 
-const Footer = styled.div`
-  height: 240px;
-  border: solid 1px black;
-  background-color: black;
+// const Footer = styled.div`
+//   height: 240px;
+//   border: solid 1px black;
+//   background-color: black;
+// `;
+interface IHeaderProps {
+  nbPosition: number;
+  isActive: boolean;
+}
+
+const SHeader = styled.div<{ nbPosition: number }>`
+  nav {
+    /* background-color: #ffffff00; */
+    /* box-shadow: 0 5px 5px rgb(0 0 0 / 0%); */
+    background-color: ${(props) => {
+      if (props.nbPosition === 0) {
+      }
+    }};
+    /* box-shadow: 0 5px 5px rgb(0 0 0 / 0%); */
+  }
 `;
 
 const SLandingBody = styled.div`
@@ -79,13 +98,27 @@ const Cards = styled.div`
   justify-content: space-around;
   margin-top: 10.64vw;
 `;
+
 function LandingPages() {
   const bannerText = "어떤 스터디를 원하세요?";
   const bannerSubText = "당신의 스터디를 찾아보세요!";
   const bannerButtonText = "스터디 찾기";
+  const [position, setPosition] = useState(0);
+  function onScroll() {
+    setPosition(window.scrollY);
+  }
+  useEffect(() => {
+    window.addEventListener("scroll", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
+  console.log(position);
   return (
     <SLandingBody>
-      <Nav />
+      <SHeader nbPosition={position}>
+        <NavBar bgColor="black" />
+      </SHeader>
       <SContainer>
         <SBanner>
           <SBannerItem>
