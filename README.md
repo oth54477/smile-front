@@ -1,4 +1,29 @@
+## 👪 개발 멤버 소개
 
+<table>
+    <tr>
+        <td height="140px" align="center"> <a href="https://github.com/lsh9672">
+            <img src="https://avatars.githubusercontent.com/u/56991244?v=4" width="140px" /> <br><br> 👑 이상현 <br>(Back-End) </a> <br></td>
+        <td height="140px" align="center"> <a href="https://github.com/eello">
+            <img src="https://avatars.githubusercontent.com/u/33685064?v=4" width="140px" /> <br><br> 🙂 김종성 <br>(Back-End) </a> <br></td>
+        <td height="140px" align="center"> <a href="https://github.com/yeonnno">
+            <img src="https://avatars.githubusercontent.com/u/109949649?v=4" width="140px" /> <br><br> 😆 양연호 <br>(Back-End) </a> <br></td>
+        <td height="140px" align="center"> <a href="https://github.com/hyejoojung719">
+            <img src="https://avatars.githubusercontent.com/u/81564593?v=4" width="140px" /> <br><br> 😁 정혜주 <br>(Front-End) </a> <br></td>
+        <td height="140px" align="center"> <a href="https://github.com/ki-ra">
+            <img src="https://avatars.githubusercontent.com/u/85232755?v=4" width="140px" /> <br><br> 🙄 송기라 <br>(Front-End </a> <br></td>
+        <td height="140px" align="center"> <a href="https://github.com/oth54477">
+            <img src="https://avatars.githubusercontent.com/u/66712534?v=4" width="140px" /> <br><br> 😶 오태훈 <br>(Front-End) </a> <br></td>
+    </tr>
+    <tr>
+        <td align="center">REST API<br/>WebRTC<br/>WebSocket</td>
+        <td align="center">REST API<br/>CI/CD<br/>Infra<br/></td>
+        <td align="center">REST API<br/>Database<br/>S3<br/></td>
+        <td align="center">UI/UX<br/>React<br/>FullCalendar</td>
+        <td align="center">UI/UX<br/>React<br/>WebRTC<br/>WebSocket</td>
+        <td align="center">UI/UX<br/>React<br/>WebRTC<br/>WebSocket</td>
+    </tr>
+</table>
 # 메롱 메롱 😛
 
 # Getting Started with Create React App
@@ -51,5 +76,3 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 깃 브랜치 너무 어려움...
 
 ## 뭐라고 적었을까요 알아맞춰봅시다 뀨뀨~
-
-
