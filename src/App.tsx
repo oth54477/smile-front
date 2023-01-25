@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
+import Card from "./components/common/card";
 
 function App() {
   const [value, setValue] = useState("");
@@ -10,6 +10,7 @@ function App() {
   return (
     <div>
       <p>와우</p>
+      <Card />
     </div>
   );
 }
