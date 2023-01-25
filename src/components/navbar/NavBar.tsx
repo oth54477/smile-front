@@ -1,9 +1,10 @@
 // import { Link } from "react-router-dom";
 import styled from "styled-components";
-import logoImg from "../assets/img/smile.png";
-import "../assets/css/index.css";
+import logoImg from "../../assets/img/smile.png";
+import "../../assets/css/index.css";
 
 const Nav = styled.nav`
+  // position:fixed;
   background-color: var(--clr-white);
   box-shadow: var(--light-shadow);
   display: flex;
