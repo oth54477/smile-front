@@ -11,7 +11,7 @@
         <td height="140px" align="center"> <a href="https://github.com/hyejoojung719">
             <img src="https://avatars.githubusercontent.com/u/81564593?v=4" width="140px" /> <br><br> 😁 정혜주 <br>(Front-End) </a> <br></td>
         <td height="140px" align="center"> <a href="https://github.com/ki-ra">
-            <img src="https://avatars.githubusercontent.com/u/85232755?v=4" width="140px" /> <br><br> 🙄 송기라 <br>(Front-End </a> <br></td>
+            <img src="https://avatars.githubusercontent.com/u/85232755?v=4" width="140px" /> <br><br> 🙄 송기라 <br>(Front-End) </a> <br></td>
         <td height="140px" align="center"> <a href="https://github.com/oth54477">
             <img src="https://avatars.githubusercontent.com/u/66712534?v=4" width="140px" /> <br><br> 😶 오태훈 <br>(Front-End) </a> <br></td>
     </tr>
