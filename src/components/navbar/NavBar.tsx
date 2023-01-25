@@ -4,7 +4,8 @@ import logoImg from "../../assets/img/smile.png";
 import "../../assets/css/index.css";
 
 const Nav = styled.nav`
-  // position:fixed;
+  position: fixed;
+  width: 100%;
   background-color: var(--clr-white);
   box-shadow: var(--light-shadow);
   display: flex;
@@ -63,9 +64,13 @@ const Img = styled.img`
 
 // Link가 포함된 컴포넌트를 Router 안에 들어가 있어야 사용이 가능 => 일단 보류(페이지 만들어진 뒤에 추가)
 
-function NavBar() {
+interface INavBarProps {
+  bgColor: string;
+}
+
+function NavBar(props: INavBarProps) {
   return (
-    <Nav>
+    <Nav background-color={props.bgColor}>
       <NavHeader>
         <Img src={logoImg} />
       </NavHeader>
