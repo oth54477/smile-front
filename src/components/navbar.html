@@ -5,6 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+       @import url("../assets/index.css");
+
+       nav {
+        background-color: var(--clr-white);
+        box-shadow: var(--light-shadow);
+        display: flex;
+        justify-content: space-between;
+        padding:1rem;
+        align-items: center;
+      }
+
+      .navHeader{
+        margin-left:3rem;
+      }
+
+      .links_conatiner{
+        overflow: hidden;
+      }
+
+      .links{
+        display: flex;
+        margin-right: 2rem;
+      }
+
+      ul{
+        list-style-type: none;
+        margin:0 1rem;
+        /* 텍스트 세로 중앙 정렬 위해 display, align-items 속성 추가 */
+        display: flex;
+        align-items: center;
+      }
+
+      button{
+        cursor: pointer;
+        
+      }
+    </style>  
   </head>
-  <body></body>
+  <body>
+    <nav>
+      <!-- 로고 들어가는 부분 -->
+      <div class="navHeader"> 스마일 로고 </div>
+      <!-- 메뉴 들어가는 부분 -->
+      <div class="links_container"> 
+        <li class="links">
+          <ul>스터디 조회</ul>
+          <ul>내 스터디</ul>
+          <ul>내 정보</ul>
+          <ul><button>로그인</button></ul>
+        </li> 
+      </div>
+    </nav>
+  </body>
 </html>
