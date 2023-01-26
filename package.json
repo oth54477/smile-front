@@ -14,7 +14,12 @@
     "query": "^0.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+<<<<<<< HEAD
+    "react-hook-form": "^7.42.1",
+    "react-native": "^0.71.1",
+=======
     "react-hook-form": "^                                                                 7.42.1",
+>>>>>>> 7ae00389a0f87a9bacd257b7fe5c7efe6b5c1774
     "react-query": "^3.39.2",
     "react-router-dom": "^5.3.4",
     "react-scripts": "5.0.1",
