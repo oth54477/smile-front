@@ -7,4 +7,9 @@ export const theme: DefaultTheme = {
   subColor2: "#7D7667",
   textColor: "#061C3D",
   textSubColor: "#42526B",
+  blackColor: "#000000",
+  shadowColor: "#0000001a",
+  whiteColor: "#FFFFFF",
+  whiteOpacityColor: "#FFFFFFCC",
+  subColorHover: "#5C564B",
 };

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Card from "../components/common/Card";
 import NavBar from "../components/navbar/NavBar";
-import Footer from "../components/footers/Footer";
+import Footer from "../components/common/Footer";
 import { useEffect, useState } from "react";
 
 // const Nav = styled.div`

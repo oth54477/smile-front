@@ -6,8 +6,8 @@ import "../../assets/css/index.css";
 const Nav = styled.nav`
   position: fixed;
   width: 100%;
-  background-color: var(--clr-white);
-  box-shadow: var(--light-shadow);
+  background-color: ${(props) => props.theme.whiteColor};
+  box-shadow: ${(props) => props.theme.shadowColor};
   display: flex;
   justify-content: space-between;
   padding: 0.7rem;
@@ -46,7 +46,7 @@ const NabBtn = styled.button`
   border-radius: 4px;
   padding: 0.5rem 1rem;
   margin: 0;
-  background-color: var(--clr-primary-4);
+  background-color: ${(props) => props.theme.subColor2};
   color: white;
   border: 0;
   text-decoration: none;
@@ -54,7 +54,7 @@ const NabBtn = styled.button`
   &:hover,
   active,
   focus {
-    background: var(--clr-primary-4-hover);
+    background: ${(props) => props.theme.subColorHover};
   }
 `;
 
