@@ -1,5 +1,6 @@
 import { SetStateAction, useEffect, useRef } from "react";
 import styled from "styled-components";
+import ButtonBasic from "../common/ButtonBasic";
 
 interface PropsType {
   setModalOpen: React.Dispatch<SetStateAction<boolean>>;
@@ -9,6 +10,7 @@ const ModalContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   position: fixed;
   width: 300px;
   height: 200px;
@@ -28,13 +30,15 @@ const Backdrop = styled.div`
   position: fixed;
   top: 0;
   z-index: 9999;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.5);
 `;
 
 const Close = styled.div`
+  cursor: pointer;
   position: absolute;
-  right: 10px;
-  top: 10px;
+  right: 1rem;
+  top: 1rem;
+  padding: 0.5rem;
 `;
 
 function ModalBasic(props: PropsType) {
@@ -69,6 +73,7 @@ function ModalBasic(props: PropsType) {
       <ModalContainer ref={modalRef}>
         <Close onClick={closeModal}>X</Close>
         <p>모달창입니다.</p>
+        <ButtonBasic />
       </ModalContainer>
     </Backdrop>
   );
