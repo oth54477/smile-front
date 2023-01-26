@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import Card from "../components/common/Card";
-import NavBar from "../components/navbar/NavBar";
-import Footer from "../components/footers/Footer";
+
 import { useEffect, useState } from "react";
 
 // const Nav = styled.div`
@@ -14,22 +13,22 @@ import { useEffect, useState } from "react";
 //   border: solid 1px black;
 //   background-color: black;
 // `;
-interface IHeaderProps {
-  nbPosition: number;
-  isActive: boolean;
-}
+// interface IHeaderProps {
+//   nbPosition: number;
+//   isActive: boolean;
+// }
 
-const SHeader = styled.div<{ nbPosition: number }>`
-  nav {
-    /* background-color: #ffffff00; */
-    /* box-shadow: 0 5px 5px rgb(0 0 0 / 0%); */
-    background-color: ${(props) => {
-      if (props.nbPosition === 0) {
-      }
-    }};
-    /* box-shadow: 0 5px 5px rgb(0 0 0 / 0%); */
-  }
-`;
+// const SHeader = styled.div<{ nbPosition: number }>`
+//   nav {
+//     /* background-color: #ffffff00; */
+//     /* box-shadow: 0 5px 5px rgb(0 0 0 / 0%); */
+//     background-color: ${(props) => {
+//       if (props.nbPosition === 0) {
+//       }
+//     }};
+//     /* box-shadow: 0 5px 5px rgb(0 0 0 / 0%); */
+//   }
+// `;
 
 const SLandingBody = styled.div`
   /* background-color: ${(props) => props.theme.mainColor}; */
@@ -116,9 +115,6 @@ function LandingPages() {
   console.log(position);
   return (
     <SLandingBody>
-      <SHeader nbPosition={position}>
-        <NavBar bgColor="black" />
-      </SHeader>
       <SContainer>
         <SBanner>
           <SBannerItem>
@@ -136,7 +132,6 @@ function LandingPages() {
           </Cards>
         </SStudyList>
       </SContainer>
-      <Footer />
     </SLandingBody>
   );
 }
