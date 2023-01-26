@@ -8,6 +8,7 @@ import { motion, useAnimation, useScroll } from "framer-motion";
 const Nav = styled(motion.nav)`
   position: fixed;
   width: 100%;
+
   display: flex;
   justify-content: space-between;
   padding: 0.784vw; //0.7rem

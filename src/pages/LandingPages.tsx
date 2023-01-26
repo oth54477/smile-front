@@ -1,6 +1,15 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import Card from "../components/common/Card";
-
+import studyImg1 from "../assets/img/card_photo_1.png";
+import studyImg2 from "../assets/img/card_photo_2.png";
+import studyImg3 from "../assets/img/card_photo_3.png";
+import profileImg1 from "../assets/img/userDefaultImg.png";
+import profileImg2 from "../assets/img/profile_img2.png";
+import profileImg3 from "../assets/img/profile_img3.png";
+import arrowL from "../assets/img/arrow_left.png";
+import arrowR from "../assets/img/arrow_right.png";
+import introductionImg1 from "../assets/img/introduction_img1.png";
+import introductionImg2 from "../assets/img/introduction_img2.png";
 import { useEffect, useState } from "react";
 
 // const Nav = styled.div`
@@ -32,38 +41,48 @@ import { useEffect, useState } from "react";
 
 const SLandingBody = styled.div`
   /* background-color: ${(props) => props.theme.mainColor}; */
-  @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+KR&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
   font-family: "Noto Sans", sans-serif;
-  font-family: "Noto Sans KR", sans-serif;
+  /* @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+KR&display=swap");
+  font-family: "Noto Sans KR", sans-serif; */
+`;
+const SBackground = styled.div`
   background-image: linear-gradient(
     to bottom,
     ${(props) => props.theme.mainColor},
     white
   );
-  height: 50vh;
+  height: 40vw;
 `;
 
 const SContainer = styled.div`
   display: grid;
-  grid-template-rows: 44.8vw 50.4vw 59.36vw 59.36vw;
+  grid-template-rows: 35vw 50.4vw 59.36vw 59.36vw;
+  /* grid-template-rows: 44.8vw 50.4vw 59.36vw 59.36vw; */
   /* grid-template-rows: 640px 720px 848px 848px; */
 `;
 const SBanner = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin-left: 72px;
+  justify-content: flex-end;
+  /* justify-content: center; */
+  margin-left: 5.04vw;
+  /* margin-left: 72px; */
   * {
     margin: 1.12vw 0px;
   }
 `;
 const SStudyList = styled.div`
-  padding: 5.04vw;
-  span {
-    font-size: 2.52vw;
-    font-weight: 600;
-  }
+  padding: 8.4vw 1.12vw;
+  /* padding: 8.4vw 5.6vw; */
 `;
+
+const SItemTitle = styled.span`
+  padding: 0vw 5.6vw;
+  font-size: 2.52vw;
+  font-weight: 600;
+`;
+
 const SBannerItem = styled.div`
   display: flex;
   flex-direction: column;
@@ -92,10 +111,122 @@ const SBannerButton = styled.button`
   font-size: 1.68vw;
 `;
 
-const Cards = styled.div`
+const SCards = styled.div`
   display: flex;
   justify-content: space-around;
-  margin-top: 10.64vw;
+
+  margin-top: 2.8vw;
+`;
+
+const SArrow = styled.div`
+  display: flex;
+  align-items: center;
+  img {
+    width: 0.84vw;
+    height: 2.03vw;
+    /* width: 12px;
+    height: 29px; */
+  }
+`;
+
+const slideLeft = keyframes`
+  from {
+    left: -50vw;
+  }
+  to {
+    left: 3.6vw;
+  }
+`;
+
+const slideRight = keyframes`
+  from {
+    right: -50vw;
+  }
+  to {
+    right: 3.6vw;
+  }
+`;
+
+const slideLeftReverse = keyframes`
+  from {
+    left: 3.6vw;
+  }
+  to {
+    left: -50vw;
+  }
+`;
+
+const slideRightReverse = keyframes`
+  from {
+    right: 3.6vw;
+  }
+  to {
+    right: -50vw;
+  }
+`;
+
+const SIntroductionItem = styled.div<SIntroductionItemTextProps>`
+  display: flex;
+  align-items: center;
+  padding: 0vw 3.6vw;
+  /* padding: 96px; */
+
+  img {
+    width: 44.8vw;
+    height: 52.22vw;
+    border-radius: 1.12vw;
+    position: absolute;
+    z-index: -1;
+    ${(props) => (props.direction === "L" ? "left: -50vw;" : "right: -50vw")};
+    animation: ${(props) =>
+        props.top <= 1000
+          ? props.direction === "L"
+            ? slideLeft
+            : slideRight
+          : props.direction === "L"
+          ? slideLeftReverse
+          : slideRightReverse}
+      3s forwards;
+  }
+  div {
+    ${(props) => (props.direction === "L" ? "right: 3.6vw;" : "left: 3.6vw")};
+    animation: ${(props) =>
+        props.top <= 1000
+          ? props.direction === "L"
+            ? slideRight
+            : slideLeft
+          : props.direction === "L"
+          ? slideRightReverse
+          : slideLeftReverse}
+      3s forwards;
+  }
+`;
+
+const SIntroductionItemImg = styled.img``;
+
+interface SIntroductionItemTextProps {
+  direction: string;
+  top: number;
+}
+
+const SIntroductionItemText = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: -1;
+  /* right: 3.6vw; */
+  width: 44.8vw;
+  padding-left: 2.5vw;
+`;
+
+const STextBold = styled.span`
+  font-size: 3vw;
+  /* font-size: 48px; */
+  font-weight: 600;
+`;
+const SText = styled.span`
+  font-size: 2.24vw;
+  /* font-size: 32px; */
 `;
 
 function LandingPages() {
@@ -106,32 +237,112 @@ function LandingPages() {
   function onScroll() {
     setPosition(window.scrollY);
   }
+  const [windowWidth, setWindowWidth] = useState(0);
+  function onWidth() {
+    setWindowWidth(window.innerWidth);
+  }
+
   useEffect(() => {
     window.addEventListener("scroll", onScroll);
+    window.addEventListener("resize", onWidth);
     return () => {
       window.removeEventListener("scroll", onScroll);
+      window.addEventListener("width", onWidth);
     };
   }, []);
-  console.log(position);
+  const target1 = document.getElementById("item1")!; // 요소의 id 값이 target이라 가정
+  const clientRect1 = target1?.getBoundingClientRect(); // DomRect 구하기 (각종 좌표값이 들어있는 객체)
+  const relativeTop1 = clientRect1?.top; // Viewport의 시작지점을 기준으로한 상대좌표 Y 값.
+  const target2 = document.getElementById("item2")!; // 요소의 id 값이 target이라 가정
+  const clientRect2 = target2?.getBoundingClientRect(); // DomRect 구하기 (각종 좌표값이 들어있는 객체)
+  const relativeTop2 = clientRect2?.top; // Viewport의 시작지점을 기준으로한 상대좌표 Y 값.
+  console.log("divTop", relativeTop1);
+  // let windowWidth = window.innerWidth;
+  console.log("width:", windowWidth);
+  console.log("Y:", position);
+  const studyList = [
+    {
+      si_id: 1,
+      si_img: studyImg1,
+      si_person: 4,
+      si_max_person: 5,
+      si_desc: "다 같이 열심히 공부해요~",
+      si_view: 2729,
+      si_leader: {
+        si_leader_id: 1,
+        si_leader_img: profileImg1,
+        si_leader_nickname: "이싸피",
+      },
+    },
+    {
+      si_id: 2,
+      si_img: studyImg2,
+      si_person: 3,
+      si_max_person: 5,
+      si_desc: "매일 같이 공부하실분!!",
+      si_view: 1234,
+      si_leader: {
+        si_leader_id: 2,
+        si_leader_img: profileImg2,
+        si_leader_nickname: "김싸피",
+      },
+    },
+    {
+      si_id: 3,
+      si_img: studyImg3,
+      si_person: 2,
+      si_max_person: 4,
+      si_desc: "싸피 면접 스터디 같이하시죠!",
+      si_view: 3529,
+      si_leader: {
+        si_leader_id: 3,
+        si_leader_img: profileImg3,
+        si_leader_nickname: "박대전",
+      },
+    },
+  ];
+
   return (
     <SLandingBody>
-      <SContainer>
-        <SBanner>
-          <SBannerItem>
-            <span>{bannerText}</span>
-            <span>{bannerSubText}</span>
-          </SBannerItem>
-          <SBannerButton>{bannerButtonText}</SBannerButton>
-        </SBanner>
-        <SStudyList>
-          <span>현재 인기있는 스터디</span>
-          <Cards>
-            <Card />
-            <Card />
-            <Card />
-          </Cards>
-        </SStudyList>
-      </SContainer>
+      <SBackground>
+        <SContainer>
+          <SBanner>
+            <SBannerItem>
+              <span>{bannerText}</span>
+              <span>{bannerSubText}</span>
+            </SBannerItem>
+            <SBannerButton>{bannerButtonText}</SBannerButton>
+          </SBanner>
+          <SStudyList>
+            <SItemTitle>현재 인기있는 스터디</SItemTitle>
+            <SCards>
+              <SArrow>
+                <img src={arrowL} alt="" />
+              </SArrow>
+              {studyList.map((study) => (
+                <Card key={study.si_id} studyInfo={study} />
+              ))}
+              <SArrow>
+                <img src={arrowR} alt="" />
+              </SArrow>
+            </SCards>
+          </SStudyList>
+          <SIntroductionItem direction="L" top={relativeTop1}>
+            <SIntroductionItemImg src={introductionImg1} id="item1" />
+            <SIntroductionItemText>
+              <STextBold>당신의 스터디를 찾아보세요!</STextBold>
+              <SText>어떤 스터디를 원하세요?</SText>
+            </SIntroductionItemText>
+          </SIntroductionItem>
+          <SIntroductionItem direction="R" top={relativeTop2}>
+            <SIntroductionItemText>
+              <STextBold>당신의 스터디를 찾아보세요!</STextBold>
+              <SText>어떤 스터디를 원하세요?</SText>
+            </SIntroductionItemText>
+            <SIntroductionItemImg src={introductionImg2} id="item2" />
+          </SIntroductionItem>
+        </SContainer>
+      </SBackground>
     </SLandingBody>
   );
 }

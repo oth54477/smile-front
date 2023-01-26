@@ -1,4 +1,4 @@
-import img from "../../assets/components/common/userDefaultImg.png";
+import img from "../../assets/img/userDefaultImg.png";
 import styled from "styled-components";
 const Img = styled.img`
   width: ${(props) => props.width};
