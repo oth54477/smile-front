@@ -3,6 +3,7 @@ import NavBar from "./components/common/NavBar";
 import Footer from "./components/common/Footer";
 import Router from "./Router";
 import { createGlobalStyle } from "styled-components";
+import Modal from "./components/common/Modal";
 
 const GlobalStyle = createGlobalStyle`
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap");
@@ -147,9 +148,8 @@ a:visited,
 a:active,
 a:link {
   text-decoration: none !important;
-}
+}`;
 
-`;
 
 function App() {
   return (
@@ -157,6 +157,7 @@ function App() {
       <GlobalStyle />
       <NavBar />
       <Router />
+      {/* <Modal /> */}
       <Footer />
     </>
   );

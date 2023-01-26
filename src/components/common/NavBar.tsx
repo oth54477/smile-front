@@ -85,7 +85,6 @@ function NavBar() {
   const { scrollY } = useScroll();
   const navAnimation = useAnimation();
   const curPath = window.location.pathname;
-
   useEffect(() => {
     if (curPath === "/") {
       scrollY.onChange(() => {
@@ -101,7 +100,7 @@ function NavBar() {
   }, [scrollY, navAnimation, curPath]);
 
   return (
-    <Nav variants={navVariants} animate={navAnimation} {...(curPath==="/"?initial={"top"}:initial={"fix"})} >
+    <Nav variants={navVariants} animate={navAnimation} initial={"top"}>
       <NavHeader>
         <Img src={logoImg} />
       </NavHeader>
