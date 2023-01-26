@@ -1,18 +1,19 @@
-
 import Modal from "./components/common/Modal";
 import ButtonBasic from "./components/common/ButtonBasic";
 import NavBar from "./components/common/NavBar";
 import Footer from "./components/common/Footer";
 import Router from "./Router";
 import { createGlobalStyle } from "styled-components";
-import Modal from "./components/common/Modal";
-import LandingPages from "./pages/LandingPages";
-
 
 const GlobalStyle = createGlobalStyle`
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+
 html,
-body,
+body {
+  font-family: "Noto Sans", sans-serif;
+
+}
 div,
 span,
 applet,

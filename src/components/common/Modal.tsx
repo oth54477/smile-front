@@ -14,7 +14,7 @@ function Modal() {
   return (
     <div>
       <div>
-        <button onClick={showModal}>모달 띄우기</button>
+        {/* <button onClick={showModal}>모달 띄우기</button> */}
         {modalOpen && <ModalBasic setModalOpen={setModalOpen} />}
       </div>
     </div>
@@ -22,3 +22,4 @@ function Modal() {
 }
 
 export default Modal;
+
