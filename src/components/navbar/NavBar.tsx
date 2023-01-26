@@ -7,7 +7,8 @@ const Nav = styled.nav`
   position: fixed;
   width: 100%;
   background-color: var(--clr-white);
-  box-shadow: var(--light-shadow);
+  box-shadow: 0px 0px 5px black;
+  /* box-shadow: var(--light-shadow); */
   display: flex;
   justify-content: space-between;
   padding: 0.7rem;
