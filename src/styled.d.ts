@@ -9,5 +9,10 @@ declare module "styled-components" {
     subColor2: string;
     textColor: strinf;
     textSubColor: string;
+    blackColor: string;
+    shadowColor: string;
+    whiteColor: string;
+    whiteOpacityColor: string;
+    subColorHover: string;
   }
 }

@@ -3,12 +3,16 @@ import logoImg from "../../assets/img/smile.png";
 import "../../assets/css/index.css";
 
 const FooterContainer = styled.footer`
-  background-color: var(--clr-black);
-  color: var(--clr-white-opacity-1);
+  background-color: ${(props) => props.theme.blackColor};
+  color: ${(props) => props.theme.whiteOpacityColor};
   padding: 3rem 2rem;
   margin-top: 5rem;
   display: flex;
   flex-direction: column;
+  font-size: 1.12vw;
+  // position: absolute;
+  // bottom: 0;
+  // width: 100%;
 `;
 
 const FooterWrap = styled.div``;
@@ -24,7 +28,7 @@ const FooterCon1 = styled.div`
   }
   li {
     margin-right: 3rem;
-    font-size: 14px;
+    font-size: 0.98vw;
     letter-spacing: -0.24px;
   }
 `;
@@ -32,7 +36,7 @@ const FooterCon1 = styled.div`
 const FooterCon2 = styled.div`
   margin-top: 3rem;
   a {
-    color: var(--clr-white-opacity-1);
+    color: ${(props) => props.theme.whiteOpacityColor};
   }
   p {
     line-height: 30px;
@@ -45,11 +49,11 @@ const Copy = styled.div`
 `;
 
 const TopButton = styled.button`
-  background-color: var(--clr-black);
+  background-color: ${(props) => props.theme.blackColor};
   border: 0px;
-  color: var(--clr-white-opacity-1);
+  color: ${(props) => props.theme.whiteOpacityColor};
   cursor: pointer;
-  font-size: large;
+  font-size: 1.12vw;
 `;
 
 const Img = styled.img`
