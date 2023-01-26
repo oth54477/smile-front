@@ -9,6 +9,10 @@ const FooterContainer = styled.footer`
   margin-top: 5rem;
   display: flex;
   flex-direction: column;
+  font-size: 1.12vw;
+  // position: absolute;
+  // bottom: 0;
+  // width: 100%;
 `;
 
 const FooterWrap = styled.div``;
@@ -24,7 +28,7 @@ const FooterCon1 = styled.div`
   }
   li {
     margin-right: 3rem;
-    font-size: 14px;
+    font-size: 0.98vw;
     letter-spacing: -0.24px;
   }
 `;
@@ -49,7 +53,7 @@ const TopButton = styled.button`
   border: 0px;
   color: ${(props) => props.theme.whiteOpacityColor};
   cursor: pointer;
-  font-size: large;
+  font-size: 1.12vw;
 `;
 
 const Img = styled.img`
