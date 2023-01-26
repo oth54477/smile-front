@@ -64,13 +64,9 @@ const Img = styled.img`
 
 // Link가 포함된 컴포넌트를 Router 안에 들어가 있어야 사용이 가능 => 일단 보류(페이지 만들어진 뒤에 추가)
 
-interface INavBarProps {
-  bgColor: string;
-}
-
-function NavBar(props: INavBarProps) {
+function NavBar() {
   return (
-    <Nav background-color={props.bgColor}>
+    <Nav>
       <NavHeader>
         <Img src={logoImg} />
       </NavHeader>
